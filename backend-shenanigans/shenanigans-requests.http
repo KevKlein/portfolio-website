@@ -1,0 +1,132 @@
+### create documents
+### CREATE 1
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Passenger using umbrella",
+    "score": 5,
+    "date": "05-15-2019",
+    "link": "kkscooterUmbrella"
+}
+
+### CREATE 2
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Precarious dog passenger",
+    "score": 7,
+    "date": "08-07-2022",
+    "link": "kkscooterDogPassenger"
+}
+
+### CREATE 3
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Custom parrot perch mod",
+    "score": 3,
+    "date": "11-16-2021",
+    "link": "kkscooterParrots"
+}
+
+
+### CREATE 4
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Too many helmets cargo",
+    "score": 4,
+    "date": "09-05-2023",
+    "link": "kkscooterHelmets"
+}
+### CREATE 5
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Awkward potted plants",
+    "score": 9,
+    "date": "09-18-2019",
+    "link": "kkscooterPlants"
+}
+
+### CREATE 6
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Custom Psyduck paintjob",
+    "score": 2,
+    "date": "04-11-2023",
+    "link": "https://imgur.com/fAsBMJc.jpeg"
+}
+
+### CREATE 7
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Too many boxes cargo",
+    "score": 6,
+    "date": "03-08-2023",
+    "link": "kkscooterManyBoxes"
+}
+
+### CREATE 8
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Stylish passenger dog",
+    "score": 3,
+    "date": "04-11-2023",
+    "link": "kkscooterGoggleDog"
+}
+
+### CREATE 9
+POST http://localhost:3000/shenanigans HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Too many adult riders",
+    "score": 4,
+    "date": "04-11-2023",
+    "link": "kkscooter3Riders"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/shenanigans HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/shenanigans/67555c1ccf81bd91c9fa8ee0 HTTP/1.1
+
+
+### UPDATE one document's score, by ID.
+### Replace the ID in the following request with one that exists
+### and update the score:
+PUT http://localhost:3000/shenanigans/6759508015a21fe7426bf8ac HTTP/1.1
+content-type: application/json
+
+{
+    "description": "Too many helmets",
+    "score": 3,
+    "date": "09-05-2023",
+    "link": "kkscooterOrangeHelmets"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/shenanigans/67594bbf15a21fe7426bf898 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/shenanigans HTTP/1.1
+

@@ -1,0 +1,806 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  @import 'modern-normalize';
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*   ----- Variables  -----  */
+:root {
+  /*   ----- colors  -----  */
+    --dark-chocolate:#422320;
+    --dark-chocolate-semi-transparent:#42232099;
+    --macha:#BABF26;
+    --macha-semi-transparent:#BABF26ee;
+    --teal:#5b9fc7;
+    --teal-transparent:#5b9fc7cc;
+    --teal-light:#C5DFF0;
+    --teal-light-transparent:#C5DFF0cc;
+    --vanilla:#FEF6E3;
+    --vanilla-semi-transparent:#FEF6E3ee;
+    --pumpkin-spice:#D98F4E;
+    --pumpkin-spice-transparent:#D98F4E66;
+    --frozen-strawberry:#D96262;
+
+    --header-height: 50px;
+    --content-max-width: 950px; /* used by section and main nav */ 
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+
+  body {       /* Can alternatively define in html {}. */
+    background: url(/src/assets/pineapple-plant-double-purple.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color:var(--vanilla);
+    color:var(--dark-chocolate);
+    min-width: 300px;
+    max-width:100%; /* content max width defined in :root variables */
+    margin:0 auto;
+    padding: 0;
+
+     /* Define with at least one font name and its related generic family name. */
+    font-family:'Oxygen', serif;
+  }
+
+  /*  ----- Page layout blocks -----  */
+    /* top     right      bottom    left*/ 
+    /* top     left/right bottom */
+    /* top/bot left/right */
+
+  header {
+    background-color:var(--vanilla);
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: var(--header-height);
+    
+  }
+
+  header h1 img {
+    height: 50px;
+  }
+
+  main {    
+  }
+
+  section {
+    background-color:var(--vanilla-semi-transparent);
+    margin: 0 auto;
+    padding: 1% 2% 1%;
+    max-width: var(--content-max-width);
+  }
+  article {
+    padding-top: 1%;
+  }
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {
+    width: 40%;
+    padding: 1% 0 2% 2%;
+    float: right;
+  }
+  aside img{
+    max-width: 300px;
+  }
+  footer {
+    background-color:var(--frozen-strawberry);
+    bottom: 0%;
+    box-sizing: border-box;
+    margin-inline: 10px;
+    margin: 0px;
+    gap: 10px;
+    padding: 0 20px;
+
+    border: 3px solid var(--dark-chocolate);
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  
+  /* pages-nav and local nav further refined with classes at the bottom. */
+  nav {
+    background-color:var(--frozen-strawberry);
+    padding: 1% 2% 1%;
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    text-decoration:none;
+  }
+
+  nav a {
+    background-color:var(--vanilla);
+    border:2px solid var(--vanilla);
+    border-radius:5px 5px; 
+    color:var(--teal);
+    font-size:1.1em;
+    font-weight:bold;
+    margin-right:3px;
+    padding: 5px;
+    text-decoration:none;
+  }
+
+  nav a:hover {
+    background-color: var(--teal);
+    border: 2px solid var(--teal);
+    color: var(--vanilla);
+    text-decoration: underline;
+}
+
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lora", serif; 
+    font-weight: 600; 
+    font-style: italic; 
+
+    } 
+  h1 {
+    margin: 5px 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+  }
+  h2 {
+    display: flex;
+    margin-top:5px;
+    margin-bottom:10px;
+    font-size: xx-large;
+    gap: 6px;
+    justify-content: center;
+  }
+  h3 {font-size: x-large;}
+  h4 {
+    font-size: larger;
+    font-style: normal;
+  }
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {}
+  
+  caption {font-size: larger;}
+  thead {}
+
+  tbody {
+  }
+  tfoot {}
+  tr {
+  }
+    tr:nth-child(even) {
+    }
+
+  th, td {
+  }
+  th {
+  }
+  th:first-child {}
+  th:nth-child(3){
+  }
+
+  colgroup {}
+  data {}
+  datalist {}    
+
+
+  /*  ----- Form ----- */
+  form {}
+  fieldset { 
+    border: solid var(--dark-chocolate); 
+    border-radius: 1% 1%;
+    margin: 0 0 1%; 
+    padding: 0 10px; 
+  }
+  legend { 
+    color: var(--frozen-strawberry); 
+    font-size:x-large; 
+  }
+  label { 
+    display:block;
+    margin: 1% 0; 
+  }
+
+  
+  fieldset p {
+    font-size: large;
+  }
+
+  fieldset[class="products-fieldset"]{
+    padding:0 1%;
+    width: 485px;
+  }
+
+  fieldset[class="mailing-fieldset"]{
+    padding:0 1%;
+    width: 340px;
+  }
+
+
+
+  p[class="display-contents-inline"] label {
+    display: inline;
+  }
+  
+  p[class="radio-group"] label{
+    font-size: medium;
+  }
+
+  p[class="contact-intro"] {
+    font-size: large;
+    margin-bottom:0;
+  }
+
+  p[class="thoughtBox"] {
+    margin: 6% 0 5%;
+  }
+
+  input, button, textarea, select { 
+   font-size:110%; 
+   padding: 1% 1%;
+   font-family:inherit; 
+   color: inherit
+  }
+
+  text {
+    margin: 2%;
+  }
+
+  input[type='range']{ accent-color: var(--macha); }
+
+
+  button {
+    margin: 2% auto;
+    padding: 1% 2%;
+    font-size: x-large;
+    background-color: var(--pumpkin-spice);
+    border: solid 2px var(--dark-chocolate);
+    border-radius:5px 5px; 
+
+  }
+
+  button:hover {
+    background-color: var(--macha);
+    border: solid 2px var(--dark-chocolate);
+  }
+
+
+  label[class='purchase-button-caption'] {
+    text-align: center;
+  }
+  button[class='purchase-button'] {
+    margin-left: 33%;
+  }
+
+  select {}
+
+  :focus{ 
+    background-color: var(--teal-light-transparent); 
+  }
+
+  :required:invalid { 
+    border: 2px solid var(--frozen-strawberry); 
+  }
+
+  :required:valid { 
+    border: 2px solid var(--macha); 
+  }
+
+  input:invalid { 
+   border: 2px solid var(--frozen-strawberry); 
+  }
+
+
+  .required:after{
+    content:" *";
+    color:red; 
+  }
+  optgroup {}
+  option {}
+  textarea {
+    min-height: 100px;
+    min-width: 320px;
+  }
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  header {
+  }
+  header i { 
+    color:var(--frozen-strawberry); 
+    margin: 1px; 
+    line-height: 0.5;
+  }
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+
+  /* -----for the navs------ */
+  .pages-nav {
+    max-width: var(--content-max-width);
+    margin: var(--header-height) auto 0;
+    border: 2px solid var(--dark-chocolate);
+    font-size: larger;
+  }
+
+  .local {
+    padding-bottom: 0;
+  }
+
+  .local a{
+    background-color:var(--pumpkin-spice);
+    color: var(--dark-chocolate);
+    border-radius:5px 5px 0 0;
+    border: 2px solid var(--dark-chocolate);
+    border-bottom: 0 ;
+    text-decoration:none;
+    }
+
+  .local a:hover {
+    border-radius:5px 5px 0 0;
+    background-color:var(--dark-chocolate);
+    border: 2px solid var(--dark-chocolate);
+    border-bottom: 0 ;
+    color:var(--pumpkin-spice);
+    text-decoration: underline;
+  }
+  
+/* -----for the Shenanigans page------ */
+  .shenanigans { 
+    display: flex;
+    flex-flow: row wrap;     
+    margin: 0; 
+    padding:0;
+    font-size: large;
+    align-self: flex-start;
+    justify-content: center;
+  }
+
+  .shenanigans figure {           
+      width: 400px; 
+      margin: 10px; 
+      padding:1%; 
+      background-color: var(--pumpkin-spice-transparent);
+      border: var(--frozen-strawberry) 3px solid;
+      border-radius: 5px;      
+      text-align: left;
+  }
+
+  .shenanigans img  {
+      max-width: 378px;
+      max-height: 450px;
+      width: auto;
+      height: auto;
+      border-radius: 5px;
+  }
+
+  .shenanigans table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--vanilla-semi-transparent);
+    border-radius: 5px;
+  }
+  .shenanigans caption {font-size: larger;}
+
+  .shenanigans tbody {
+    text-align : left;
+  }
+
+  .shenanigans td {
+  padding: 2% 2% 0% 3%;
+  vertical-align: top;
+  }
+
+  .shenanigans th {
+    padding: 2% 0% 0% 0%;
+    text-align: right;
+    width: 110px;
+  }
+
+  .shenanigans tr:nth-child(4) td {
+    padding: 0px 5px 5px 0px;
+    text-align: right;
+
+  }
+
+  .icon {
+    padding: 0;
+    color: var(--dark-chocolate-semi-transparent);
+    cursor: pointer;
+    font-size: 140%;
+
+  }
+
+  .icon:hover {
+    color: var(--dark-chocolate);
+  }
+
+  .icon svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .big-icon {
+    padding: 0;
+    color: var(--dark-chocolate-semi-transparent);
+    cursor: pointer;
+    font-size: 300%;
+    background-color: var(--pumpkin-spice-transparent);
+    border-radius: 5px;
+    border: var(--frozen-strawberry) 3px solid;
+  }
+
+  .big-icon:hover {
+    color: var(--teal);
+  }
+
+  .big-icon svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .add-shenanigan-line p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-left: 1%;
+    gap: 1%;
+  }
+
+  /* -----for the ShenaniganAdd and ShenaniganEdit pages------ */
+  .addShenanigan form {
+    display: block;
+    text-align: center; 
+  }
+
+  .addShenanigan table {
+    margin: 0 auto; 
+    border-collapse: collapse;
+    width: auto; 
+  }
+
+  .addShenanigan caption {
+    caption-side: top;
+    text-align: center;
+    width: auto; 
+    margin-top: 2%;
+
+  }
+  .addShenanigan tr{
+    text-align: left;
+  }
+
+  .addShenanigan tr:nth-child(5) td {
+    text-align: center;
+  }
+
+  /* -----for the Order page------ */
+
+  .orderTable table {
+    border-collapse: collapse;
+    width: 98%;
+    margin: 0 auto;
+  }
+  .orderTable caption {
+    font-size: larger;
+    padding-bottom: 1%;
+  }
+
+  .orderTable caption span {
+    font-size: 85%;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .orderTable  tbody {
+    text-align : left;
+  }
+  .orderTable  tr {
+    border: 2px solid var(--pumpkin-spice-transparent);
+  }
+  .orderTable  tr:nth-child(even) {
+    background-color: var(--pumpkin-spice-transparent);
+  }
+
+  .orderTable  th, td {
+    padding: 1% 2% 1% 2%;
+  }
+  .orderTable  th {
+    text-align : left;
+    background-color: var(--frozen-strawberry);
+    color: var(--vanilla);
+  }
+  .orderTable th:first-child {
+    padding-left: 8%;
+  }
+
+  .orderTable th:nth-child(3){
+    text-align :right;
+    padding-right: 25px;
+  }
+  .orderTable td:nth-child(3) {
+    text-align :right;
+    padding-right: 18px;
+  }
+  .orderTable td:nth-child(4){
+    text-align: center;
+    padding: 2px 0px 2px 0px;
+  }  
+  .orderTable th:nth-child(4){
+    text-align: center;
+    padding: 2px 0px 2px 0px;
+  }
+  .orderTable td:nth-child(5) {
+    text-align :right;
+    padding-right: 15px;
+    padding-left: 0;
+    width: 110px;
+  }
+  .orderTable th:nth-child(5){
+    padding-right: 0px;
+    margin-right:0;
+    text-align: center;
+  }
+
+  .orderTable tfoot tr{
+    border: none;
+  }
+
+  .orderTable tfoot tr:first-child{
+    height: 12px;
+  }
+
+  .orderTable tfoot tr:nth-child(even) {
+    background-color: transparent;
+  }
+
+  .orderTable tfoot td:nth-child(5){
+    border: var(--frozen-strawberry) 3px solid;
+  }
+
+  .clicker {
+    margin-bottom: -5px;
+  }
+
+  .clicker i{
+    font-size: 190%;
+    vertical-align: middle;
+    width: 2ch; 
+  }
+
+  .minus-icon {
+    color: var(--pumpkin-spice);
+    cursor: pointer;
+  }
+
+  .plus-icon {
+    color: var(--teal);
+    cursor: pointer;
+  }
+  .clicker i:hover svg{
+    stroke-width: 1.5px;
+  }
+
+  .clicker i:active svg{
+    color: var(--macha);
+    stroke-width: 1.5px;
+  }
+
+  .clicker span{
+    font-size: large;
+    display: inline-block;
+    width: 2.5ch;
+    text-align: center;
+  }
+
+  /* -----for the Gallery page------ */
+  .gallery { 
+    display: flex;
+    flex-flow: row wrap;    
+    margin:0; 
+    padding:0;
+    justify-content: center;
+  }
+
+  .gallery figure {            
+      width: 400px; 
+      margin:1%; 
+      padding:1%; 
+      border:2px;
+  }
+
+  .gallery figcaption {
+      display:block; 
+      padding: 1% 1% 2% 1%;     
+  }
+
+  .gallery img  {
+      width: min(400px, 100%);
+      margin:0;
+      padding:0;
+      border:5px solid;
+      border-color: var(--frozen-strawberry);
+      border-radius: 5px;
+  }
+
+  .gallery iframe {
+      width:100%;
+      height:200px;
+  }
+
+  .gallery figure.no-border img {
+    border: none;
+  }
+
+  .gallery figure:nth-child(5) {
+    width: 350px;
+
+  }  
+  
+  .gallery figure:nth-child(5) img {
+    border: none;
+  }
+
+  .street-address{
+    margin: 35px 0 30px;
+  }
+
+  .street-address label{
+    margin: 7px 0;
+  }
+
+  .centered-content{
+    justify-content: center;
+  }
+
+  .larger-font {
+    font-size: larger;
+  }
+
+  .indented{
+    margin-left: 2%;
+  }
+
+  .importance-intro{
+    margin-bottom: -1.5%;
+  }
+
+  .range-slider {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    font-size: medium;
+
+  }
+
+  .no-margin-top{
+    margin-top: 0;
+  }
+
+  .margin-top-small-bottom-big{
+    margin-top: 1%;
+    margin-bottom: 5%;
+    text-align: left;
+  }
+
+  .instructions{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-align: left;
+    font-size: larger;
+  }
+
+  .no-margin-bottom{
+    margin-bottom: 0;
+  }
+
+  .no-margin-bottom-font-large{
+    margin-bottom: 0;
+    font-size: large;
+  }
+
+  .margin-bottom-big {
+    margin-bottom: 5%;
+  }
+
+  .font-large{
+    font-size: large;
+  }
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  

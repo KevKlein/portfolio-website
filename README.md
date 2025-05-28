@@ -48,7 +48,7 @@ Run backend:
 ```
 cd backend-shenanigans
 npm install
-npm run dev
+npm start
 ```
 Run frontend:
 ```
